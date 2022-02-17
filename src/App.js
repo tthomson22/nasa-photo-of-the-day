@@ -11,6 +11,7 @@ function App() {
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
       .then(res => {
+        console.log(res.data)
         setData(res.data)
       })
       .catch(err => console.error(err))
